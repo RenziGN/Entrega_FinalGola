@@ -1230,7 +1230,7 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 300px) {
   .col-lg {
     flex: 1 0 0%;
   }
@@ -10863,8 +10863,10 @@ header.masthead h1, header.masthead .h1 {
 .showcase .showcase-text {
   padding: 3rem;
 }
+
+
 .showcase .showcase-img {
-  min-height: 30rem;
+  min-height: 55rem ;
   background-size: cover;
 }
 @media (min-width: 768px) {
@@ -10908,4 +10910,10 @@ header.masthead h1, header.masthead .h1 {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+
+.showcase .showcase-img { 
+  min-height: 55rem ;
+  background-size: cover;
 }

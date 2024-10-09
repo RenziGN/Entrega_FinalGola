@@ -47,3 +47,7 @@ nav a:hover{
 nav{
     flex-direction: row!important;
 }
+.showcase .showcase-img {
+    min-height: 55rem ;
+    background-size: cover;
+  }
