@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title src>Store</title>
+    <link  href="{% static '/css/styles.css' %}" rel="stylesheet" >
+    <link rel="shortcut icon" href="https://github.com/RenziGN/Entrega_FinalGola/blob/main/Entrega_Final/Static/Images/Andromeda%20version%20nueva%20png.png?raw=true" />
+    <link  href="{% static '/css/navbar.css' %}" rel="stylesheet" >
+    
+</head>
+
+<body>
+    {% include "navbar.html" %}
+                   
+    </header>
+    
+    <div class="container-items">
+    
+        <div class="item">
+            <figure>
+                <img src="https://github.com/RenziGN/Entrega_FinalGola/blob/main/Entrega_Final/Static/Images/Spiderman.jpg?raw=true">
+            </figure>
+            <div>
+                <div class="info-producto">
+                    <h2>Cuadro Spiderma&Gwen</h2>
+                    <p class="price">$22800</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="item">
+            <figure>
+                <img src="https://github.com/RenziGN/Entrega_FinalGola/blob/main/Entrega_Final/Static/Images/Coraline.jpg?raw=true">
+            </figure>
+            <div>
+                <div class="info-producto">
+                    <h2>Cuadro Coraline tunel</h2>
+                    <p class="price">$22800</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="item">
+            
+            <figure>
+                <img src="https://github.com/RenziGN/Entrega_FinalGola/blob/main/Entrega_Final/Static/Images/Lisa.jpg?raw=true">
+            </figure>
+            <div>
+                <div class="info-producto">
+                    <h2>Cuadro Lisa LSD</h2>
+                    <p class="price">$22800</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://github.com/RenziGN/Entrega_FinalGola/blob/main/Entrega_Final/Static/Images/BadBunny.jpg?raw=true">
+            </figure>
+            <div>
+                <div class="info-producto">
+                    <h2>Cuadro Bad Bunny</h2>
+                    <p class="price">$22800</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+    <script src="{% static '/js/index.js' %}"></script>
+</body>
+</html>

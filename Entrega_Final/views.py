@@ -9,12 +9,17 @@ def inicio(req):
     documento = plantilla.render()
     return HttpResponse(documento)
 
-def test(req):
-    plantilla = loader.get_template("test.html")
+def store(req):
+    plantilla = loader.get_template("store.html")
     documento = plantilla.render()
     return HttpResponse(documento)
 
-def test2(req):
-    plantilla = loader.get_template("Tienda.html")
+def home(req):
+    plantilla = loader.get_template("home.html")
+    documento = plantilla.render()
+    return HttpResponse(documento)
+
+def test(req):
+    plantilla = loader.get_template("test.html")
     documento = plantilla.render()
     return HttpResponse(documento)

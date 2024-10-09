@@ -1,10 +1,14 @@
 from django.urls import path
-from Entrega_Final.views import inicio,test,test2
+from Entrega_Final.views import inicio,store,home,test
 
 urlpatterns = [
     
-    path('', inicio,name="Inicio"),
-    # path('accounts/login/', ),
-    path('test/', test,name="Test"),
-    path('test2/', test2,name="Test2"),
+    path('', home,name="Inicio"),
+    #path('accounts/login/',),
+    #path('accounts/signup/',),
+    #path('accounts/profile/',),
+    path('store/',store,name="store"),
+    path('home/',home,name="home"),
+    path('test/',test,name="home"),
+
 ]
