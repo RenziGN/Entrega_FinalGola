@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Login',
     'Perfiles',
+    'Entrega_Final',
 ]
 
 MIDDLEWARE = [

@@ -14,9 +14,13 @@ body{
 }
 
 .icon-cart{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     stroke: #000;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
 }
 
 img {
@@ -46,6 +50,7 @@ header{
     align-items: center;
     border-radius: 50%;
     
+    
 }
 .container-cart-products{
     position: absolute;
@@ -54,11 +59,18 @@ header{
     background-color: #fff;
     width: 400px;
     z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
 }
+
+
+
 .cart-product{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
 .info-cart-product{
@@ -82,6 +94,12 @@ header{
     font-size: 20px;
 }
 
+.icon-close{
+    width: 25px;
+    color: grey;
+    height: 25px;
+}
+
 .cart-total{
     display: flex;
     justify-content: center;
@@ -99,19 +117,20 @@ header{
     font-size: 20px;
     font-weight: 900;
 }
-.icon-close{
-    width: 25px;
-    height: 25px;
+
+.hidden-cart{
+    display: none;
 }
+
 /* Retomar mañana volviendo a ver el final del video para arreglar errores*/
 .icon-close:hover{
-    stroke: red;
     cursor: pointer;
+} 
+
+
+#contador-productos{
+    font-size: 12px;
 }
-
-
-
-
 
 
 .container-items{

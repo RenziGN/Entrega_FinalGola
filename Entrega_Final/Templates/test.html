@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andr@meda</title>
-    <link rel="stylesheet" href="../Static/styles.css">
-  
+    <link  href="{% static '/css/styles.css' %}" rel="stylesheet" >
+    
 </head>
+
 <body>
     <header>
         <h1>Andr@meda</h1>
@@ -32,17 +34,17 @@
             <span id="contador-productos">0</span>
         </div>
         <div>
-            <div class="conteiner-cart-products hidden-cart">
+            <div class="container-cart-products hidden-cart">
                 <div class="cart-product">
                    <div class="info-cart-product">
                     <span class="cantidad-producto-carrito">1</span>
                     <p class="titulo-producto-carrito">Pica piedras</p>
                     <span class="precio-producto-carrito">$20</span>
                    </div> 
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="10" stroke="#1C274C" class="icon-close" stroke-width="1.5"/>
-                        <path d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
+                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                  
                 </div>
                 <div class="cart-total">
                     <h3>Total</h3>
@@ -53,6 +55,7 @@
         </div>
       
     </header>
+    
     <div class="container-items">
     
         <div class="item">
@@ -84,6 +87,7 @@
     
     
         <div class="item">
+            
             <figure>
                 <img src="https://github.com/RenziGN/Entrega_FinalGola/blob/main/Entrega_Final/Static/Images/Lisa.jpg?raw=true">
             </figure>
@@ -108,5 +112,7 @@
             </div>
         </div>
 </div>
+
+    <script src="{% static '/js/index.js' %}"></script>
 </body>
 </html>

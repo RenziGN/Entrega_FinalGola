@@ -13,3 +13,8 @@ def test(req):
     plantilla = loader.get_template("test.html")
     documento = plantilla.render()
     return HttpResponse(documento)
+
+def test2(req):
+    plantilla = loader.get_template("Tienda.html")
+    documento = plantilla.render()
+    return HttpResponse(documento)
