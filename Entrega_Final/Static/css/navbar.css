@@ -3,6 +3,21 @@ body{
     margin: 0;
 }
 
-{
-    
+header{
+    display: flex;
+    height: 70px;
+    background-color: blueviolet;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
 }
