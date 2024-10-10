@@ -1,11 +1,11 @@
 from django.urls import path
-from Entrega_Final.views import inicio,store,home,test
+from .views import inicio,store,home,test,registro
 
 urlpatterns = [
     
     path('', home,name="Inicio"),
     #path('accounts/login/',),
-    #path('accounts/signup/',),
+    path('accounts/register',registro,name="registro"),
     #path('accounts/profile/',),
     path('store/',store,name="store"),
     path('home/',home,name="home"),
