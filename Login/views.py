@@ -35,11 +35,12 @@ def registro(req):
             
             data = mi_formulario.cleaned_data
 
-            usuario_nuevo = Usuario(None,req.POST['Usuario'],req.POST['Correo_electronico'],req.POST['Contraseña'])
+            usuario_nuevo = Usuario(None,Usuario=data['Usuario'],Correo_electronico=data['Correo_electronico'],Contraseña=data['Contraseña'])
 
             usuario_nuevo.save()
-
-            return render(req, "home.html",{})
+            
+            return render(req, "home.html",{})  
+        
         else:
 
             return render(req, "registro.html",{})

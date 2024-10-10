@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andro@meda</title>
+    <link  href="{% static '/css/registro.css' %}" rel="stylesheet" >
 </head>
 <body>
-    <form action="{% url 'registro' %}" method="post"> {% csrf_token %}
+    {% include "NavBar.html" %}
+    <h1 class="titulo">Registrarse</h1>
+    <div class="registro">
+    <form action="{% url 'registro' %}" class="registroform" method="post"> {% csrf_token %}
     {{mi_formulario.as_p}}
-        <button type="submit">Registrarse</button>
+    <button href="../Templates/home.html" type="submit" class="Button">Registrarse</button>
     </form>
+    </div>
 </body>
 </html>
