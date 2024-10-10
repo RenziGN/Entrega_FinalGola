@@ -11,9 +11,9 @@
     {% include "NavBar.html" %}
     <h1 class="titulo">Registrarse</h1>
     <div class="registro">
-    <form action="{% url 'registro' %}" class="registroform" method="post"> {% csrf_token %}
+    <form action="{% url 'registro' %}"  class="registroform" method="post"> {% csrf_token %}
     {{mi_formulario.as_p}}
-    <button href="../Templates/home.html" type="submit" class="Button">Registrarse</button>
+    <button type="submit" class="Button">Registrarse</button>
     </form>
     </div>
 </body>

@@ -1,14 +1,12 @@
 from django.urls import path
-from .views import inicio,store,home,test,registro
+from .views import inicio,store,home,registro,about
 
 urlpatterns = [
     
     path('', home,name="Inicio"),
-    #path('accounts/login/',),
-    path('accounts/register',registro,name="registro"),
-    #path('accounts/profile/',),
     path('store/',store,name="store"),
-    path('home/',home,name="home"),
-    path('test/',test,name="home"),
+    path('accounts/register',registro,name="registro"),
+    #path('accounts/login/',),
+    path('about/',about,name="about"),
 
 ]

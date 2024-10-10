@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.template import Template,Context,loader
 from django.urls import path
@@ -21,8 +21,8 @@ def home(req):
     documento = plantilla.render()
     return HttpResponse(documento)
 
-def test(req):
-    plantilla = loader.get_template("test.html")
+def about(req):
+    plantilla = loader.get_template("about.html")
     documento = plantilla.render()
     return HttpResponse(documento)
 
@@ -39,7 +39,7 @@ def registro(req):
 
             usuario_nuevo.save()
             
-            return render(req, "home.html",{})  
+            return redirect('Inicio')
         
         else:
 
