@@ -12,7 +12,7 @@ header{
     background-color: wheat;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     border-bottom-right-radius: 35px;
     border-bottom-left-radius: 35px;
     flex-direction: row;
@@ -40,12 +40,13 @@ nav a:hover{
 .nav-link{
     background-color: rgb(248,249,215);
     padding: 10px;
-    margin: 0px 30px;
+    margin: 0px 20px;
     border-radius: 20px;
 }
 
 nav{
     flex-direction: row!important;
+    display: flex;
 }
 .showcase .showcase-img {
     min-height: 55rem ;

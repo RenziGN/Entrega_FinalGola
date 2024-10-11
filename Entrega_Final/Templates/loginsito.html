@@ -9,11 +9,11 @@
 </head>
 <body>
     {% include "NavBar.html" %}
-    <h1 class="titulo">Registrarse</h1>
+    <h1 class="titulo">Iniciar Sesion</h1>
     <div class="registro">
-    <form action="{% url 'registro' %}"  class="registroform" method="post">{% csrf_token %}
-    {{mi_formulario.as_p}}
-    <button type="submit" class="Button">Registrarse</button>
+    <form action="{% url 'loginsito' %}"  class="registroform" method="post">{% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="Button">Iniciar Sesion</button>
     </form>
     </div>
 </body>

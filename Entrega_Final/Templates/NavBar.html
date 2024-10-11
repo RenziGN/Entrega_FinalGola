@@ -18,8 +18,17 @@
         <nav>
             <a href="{% url 'Inicio' %}" class="nav-link">Inicio</a>
             <a href="{% url 'store' %}" class="nav-link">Tienda</a>
-            <a href="{% url 'registro' %}"class="nav-link">Registrarse</a>
-            <a href="#!" class="nav-link">Iniciar Sesion</a>
+            
+            {% if user.is_authenticated %}
+                <p class="nav-link">Bienvenido {{ user.username }}</p>
+                <form action="{% url 'Logout' %}" method="post" >{% csrf_token %}    
+                    <button class="nav-link" type="submit">Cerrar sesión</button>
+                </form>
+            {% else %}
+                <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>
+                <a class="nav-link" href="{% url 'loginsito' %}">Iniciar Sesión</a>
+            {% endif %}
+            
             <a href="{% url 'about' %}" class="nav-link">About</a>
         </nav>
         <div class="container-icon">
