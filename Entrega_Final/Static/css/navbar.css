@@ -52,3 +52,9 @@ nav{
     min-height: 55rem ;
     background-size: cover;
   }
+
+
+
+.profile_pic img{
+    margin-right: 20px;
+}

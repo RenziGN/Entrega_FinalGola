@@ -18,7 +18,7 @@
     <body>
         <!-- Navigation-->
         {% include "navbar.html" %}
-    
+        
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
@@ -73,15 +73,15 @@
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href="#!">Inicio</a></li>
+                            <li class="list-inline-item"><a href="{% url 'Inicio' %}">Inicio</a></li>
                             <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Tienda</a></li>
+                            <li class="list-inline-item"><a href="{% url 'store' %}">Tienda</a></li>
                             <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Registrarse</a></li>
+                            <li class="list-inline-item"><a href="{% url 'registro' %}">Registrarse</a></li>
                             <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">Iniciar Sesion</a></li>
+                            <li class="list-inline-item"><a href="{% url 'loginsito' %}">Iniciar Sesion</a></li>
                             <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href="#!">About</a></li>
+                            <li class="list-inline-item"><a href="{% url 'about' %}">About</a></li>
                         </ul>
                         <p class="text-muted small mb-4 mb-lg-0">&copy; Andromeda 2024. Todos los derechos reservados</p>
                     </div>

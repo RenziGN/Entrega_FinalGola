@@ -180,7 +180,7 @@ header{
     overflow: hidden;
 }
 
-.info-producto button{
+.info-producto a{
     border: none;
     background-color: black;
     font-weight: bold;
