@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andro@meda</title>
+    <link  href="{% static '/css/styles.css' %}" rel="stylesheet" >
+    <link  href="{% static '/css/navbar.css' %}" rel="stylesheet" >
+</head>
+<body>
+    <h1>Este es un listado de las diferentes paginas que podremos encontrarnos en esta web:</h1>
+    <a href="{% url 'Inicio' %}" class="">Inicio</a>
+    <a href="{% url 'store' %}" class="">Tienda</a>
+    <a href="{% url 'registro' %}" class="">Registro</a>
+    <a href="{% url 'loginsito' %}" class="">Login</a>
+    <a href="{% url 'about' %}" class="">About</a>
+    <a href="{% url 'logout' %}" class="">Logout</a>
+    <a href="{% url 'verusuarios' %}" class="">Ver Usuarios</a>
+    <a href="{% url 'editarperfil' %}" class="">Editar Perfil</a>
+    <a href="{% url 'Agregaravatar' %}" class="">Agregar Avatar</a>
+    <a href="{% url 'Nopage' %}" class="">No Page</a>
+    <a href="{% url 'pages' %}" class="">Pages</a>
+    <a href="{% url 'eliminar_usuario' %}" class="">Eliminar Usuarios</a>
+</body>
+</html>

@@ -23,6 +23,7 @@
                 <p class="nav-link">Bienvenido {{ user.username }}</p>
                 <form action="{% url 'Logout' %}" method="post" >{% csrf_token %}    
                     <button class="nav-link" type="submit">Cerrar sesión</button>
+                    <a class="nav-link" type="submit" href="{% url 'editarperfil' %}">Editar Perfil</a>   
                 </form>
             {% else %}
                 <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>

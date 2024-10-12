@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Andro@meda</title>
 </head>
 <body>
-    {% for p in usuarios %}
-        <li>{{p}}</li>
+<h1>
+Los usuarios creados son:
+</h1>
+    <ul>
+    {% for usuarios in users %}
+    <li>
+        Usuario: {{usuarios}} Correo: {{usuarios.email}}
+    </li>
+    <div style="display: flex; column-gap: 5px;">
+        <form action="{% url 'eliminar_usuario' usuarios.id %}" method="post">{% csrf_token %}
+        <button tpye="submit">Eliminar usuario</a> 
+        </form>  
+    </div>
+    {% empty %}
+    <li>No hay usuarios disponibles.</li>
     {% endfor %}
+    </ul>
+
 </body>
 </html>

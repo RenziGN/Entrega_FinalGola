@@ -1,11 +1,11 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect,get_object_or_404
+from django.contrib.auth.decorators import login_required,permission_required
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from .forms import UserEditForm,AvatarForm
 from django.contrib.auth import login, authenticate
 from .models import Usuario,Avatar
-
+from django.contrib.auth.models import User
 def inicio(req):
     
     return render(req, "home.html")
@@ -37,9 +37,21 @@ def registro(req):
         return render(req, "registro.html", {"mi_formulario": mi_formulario})
 
 def ver_usuarios(req):
-    usuarios = Usuario.objects.all()
-    contexto = {"usuarios": usuarios}
-    return render(req, "ver_usuarios.html", contexto)
+    usuarios = User.objects.all()
+    
+    return render(req, "ver_usuarios.html", {"users": usuarios})
+
+def pages(req):
+    return render(req, "pages.html")
+
+def elimina_usuario(req, id):
+    if req.method == 'POST':
+        usuario = get_object_or_404(User, id=id)
+        usuario.delete()
+        usuarios = User.objects.all()
+        return render(req, "ver_usuarios.html", {"users": usuarios})
+    else:
+        return render(req, "ver_usuarios.html", {"users": User.objects.all()})
 
 def loginsito(req):
     if req.method == 'POST':
