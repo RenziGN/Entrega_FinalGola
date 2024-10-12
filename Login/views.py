@@ -4,7 +4,9 @@ from django.contrib.auth.decorators import login_required,permission_required
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from .forms import UserEditForm,AvatarForm
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import user_passes_test
 from .models import Usuario,Avatar
+
 from django.contrib.auth.models import User
 def inicio(req):
     
@@ -36,9 +38,12 @@ def registro(req):
         mi_formulario = UserCreationForm()
         return render(req, "registro.html", {"mi_formulario": mi_formulario})
 
+def es_admin(usuario):
+    return usuario.is_superuser
+
+@user_passes_test(es_admin)
 def ver_usuarios(req):
     usuarios = User.objects.all()
-    
     return render(req, "ver_usuarios.html", {"users": usuarios})
 
 def pages(req):
